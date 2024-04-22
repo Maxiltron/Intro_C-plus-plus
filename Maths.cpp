@@ -18,6 +18,10 @@ Rectangle::~Rectangle()
    
 }
 
+void Rectangle::Draw()
+{
+    
+}
 
 int Rectangle::CalcArea()
 {
