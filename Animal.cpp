@@ -14,26 +14,30 @@ Animal::~Animal()
 {
 }
 
-bool Animal::isCarnivore(Animal* a)
+bool Animal::isCarnivore()
 {
-	if (a->GetAnimal_id() == 3)
+	if (GetAnimal_id() == 3)
 	{
+		cout << "Pas Carnivore" << endl;
 		return false;
 	}
 	else
 	{
+		cout << "Carnivore" << endl;
 		return true;
 	}
 }
 
-bool Animal::CanEat(Animal* a,Animal* b)
+bool Animal::CanEat(Animal* a)
 {
-	if (isCarnivore(a) == true and a->GetWeight() > b->GetWeight())
+	if (isCarnivore() == true and GetWeight() > a->GetWeight())
 	{
+		cout << "Oui" << endl;
 		return true;
 	}
 	else
 	{
+		cout << "Non" << endl;
 		return false;
 	}
 }
@@ -130,5 +134,7 @@ int main()
 {
 	Animal* A1 = Animal::NewAnimal(5, 5, 2);
 	Animal* A2 = Animal::NewAnimal(15, -2, 1);
-	cout << A1->IsBird();
+	A1->IsBird();
+	A1->CanEat(A2);
+
 }

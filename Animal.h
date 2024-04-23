@@ -5,8 +5,8 @@ class Animal
 public:
 	Animal();
 	virtual ~Animal();
-	bool isCarnivore(Animal* a);
-	bool CanEat(Animal* a,Animal* b);
+	bool isCarnivore();
+	bool CanEat(Animal* a);
 	void Eat(Animal* a,Animal* b);
 	bool IsFish();
 	bool IsBird();
