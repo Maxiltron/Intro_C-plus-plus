@@ -7,7 +7,7 @@ public:
 	virtual ~Animal();
 	bool isCarnivore();
 	bool CanEat(Animal* a);
-	void Eat(Animal* a,Animal* b);
+	void Eat(Animal* a);
 	bool IsFish();
 	bool IsBird();
 	void MoveToSea();
@@ -19,11 +19,13 @@ public:
 	virtual int GetWeight();
 	virtual int GetPos();
 	virtual int GetAnimal_id();
+	virtual int GetID();
 	void AddWeight(int weight);
 protected:
-	static int ID;
+	static int s_nextID;
+	int m_ID_General;
 	int m_Animal_id;
 	int m_position_Y;
 	int m_Weight;
 };
-int Animal::ID = 1;
+int Animal::s_nextID = 1;
